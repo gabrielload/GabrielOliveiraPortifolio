@@ -1,0 +1,208 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f4f4; /* Light gray */
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Container */
+.portfolio {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #000; /* Black */
+  color: white;
+  border-radius: 0 0 20px 20px;
+  animation: fadeIn 1s ease-out;
+}
+
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+  opacity: 0;
+  animation: fadeInUp 1s 0.5s forwards;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: fadeInUp 1s 1s forwards;
+}
+
+.contact a {
+  color: #ff0000; /* Red */
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 15px;
+  opacity: 0;
+  animation: fadeInUp 1s 1.5s forwards;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+  color: #cc0000; /* Darker red */
+}
+
+/* Section Titles */
+section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #000; /* Black */
+  border-bottom: 3px solid #ff0000; /* Red */
+  display: inline-block;
+  padding-bottom: 10px;
+  margin-top: 40px;
+  opacity: 0;
+  animation: fadeInUp 1s 0.5s forwards;
+}
+
+/* Summary Section */
+.summary p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  text-align: justify;
+  color: #333;
+  opacity: 0;
+  animation: fadeInUp 1s 1s forwards;
+}
+
+/* Experience, Education, Projects, Certifications */
+.experience-item,
+.education-item,
+.project-item,
+.service-item {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  animation: fadeInUp 1s 1s forwards;
+}
+
+.experience-item:nth-child(even),
+.education-item:nth-child(even),
+.project-item:nth-child(even),
+.service-item:nth-child(even) {
+  animation-delay: 1.2s;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: #000; /* Black */
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1rem;
+  color: #666; /* Dark gray */
+}
+
+/* Certifications */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  background-color: #000; /* Black */
+  color: white;
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease-in-out;
+}
+
+ul li:hover {
+  background-color: #ff0000; /* Red */
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #000; /* Black */
+  color: white;
+  margin-top: 50px;
+  border-radius: 20px 20px 0 0;
+}
+
+footer a {
+  color: #ff0000; /* Red */
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: #cc0000; /* Darker red */
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.5rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  section h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+  }
+
+  .experience-item,
+  .education-item,
+  .project-item,
+  .service-item {
+    padding: 15px;
+  }
+
+  ul li {
+    font-size: 0.8rem;
+  }
+}
